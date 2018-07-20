@@ -12,6 +12,7 @@ namespace Passagens
     {
         [DataMember]
         public string Nome { get; set; }
+
         [DataMember]
         public string Cpf { get; set; }
 
