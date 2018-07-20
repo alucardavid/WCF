@@ -8,16 +8,29 @@ namespace Passagens
 {
     public class ClienteService : IClienteService
     {
-        public void Add(Cliente c)
+        public bool Add(string nome, string cpf)
         {
             ClienteDao dao = new ClienteDao();
+            Cliente c = new Cliente
+            {
+                Nome = nome,
+                Cpf = cpf
+            };
+
             dao.Add(c);
+
+            return true;
         }
 
         public Cliente Buscar(string nome)
         {
             ClienteDao dao = new ClienteDao();
             return dao.Buscar(nome);
+        }
+
+        public List<Cliente> GetClientes()
+        {
+            return ClienteDao.clientes;
         }
     }
 }

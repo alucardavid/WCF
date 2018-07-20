@@ -23,7 +23,6 @@ namespace ConsumindoServico
             string nome = txtNome.Text;
             string cpf = txtCPF.Text;
 
-
             try
             {
                 ClienteServiceClient servico = new ClienteServiceClient();
